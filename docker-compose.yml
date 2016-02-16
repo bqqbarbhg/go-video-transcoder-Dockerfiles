@@ -1,0 +1,23 @@
+govitradata:
+    container_name: govitra-data
+    image: bqqbarbhg/govitra-data
+    env_file:
+        - common.env
+
+govitranginx:
+    container_name: govitra-nginx
+    image: bqqbarbhg/govitra-nginx
+    env_file:
+        - common.env
+    volumes_from:
+        - govitradata
+
+govitrauploader:
+    container_name: govitra-uploader
+    image: bqqbarbhg/govitra-uploader
+    env_file:
+        - common.env
+        - govitra.env
+    volumes_from:
+        - govitradata
+

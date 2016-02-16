@@ -8,10 +8,11 @@ RUN mkdir -p go/src/github.com/bqqbarbhg
 RUN export GOPATH=/go
 
 # Download sources
-RUN curl -SL https://github.com/bqqbarbhg/go-video-transcoder/archive/v0.1.0.tar.gz \
+RUN curl -SL https://github.com/bqqbarbhg/go-video-transcoder/archive/v0.0.1.tar.gz \
     | tar -zxC $GOPATH/src/github.com/bqqbarbhg/go-video-transcoder --strip-components=1
 
-RUN go install github.com/go-video-transcoder
+# Download dependencies and compile the server
+RUN go get github.com/go-video-transcoder
 
 EXPOSE 8080
 
