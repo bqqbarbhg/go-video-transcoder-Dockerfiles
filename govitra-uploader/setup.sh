@@ -6,12 +6,12 @@ export GOPATH=/go
 apt-get update && apt-get install -y curl exiftool libav-tools golang
 
 # Set up $GOPATH
-mkdir -p $GOPATH/src/github.com/bqqbarbhg
+mkdir -p $GOPATH/src/github.com/bqqbarbhg/go-video-transcoder
 
 # Download sources
 curl -SL https://github.com/bqqbarbhg/go-video-transcoder/archive/v0.0.1.tar.gz \
     | tar -zxC $GOPATH/src/github.com/bqqbarbhg/go-video-transcoder --strip-components=1
 
 # Download dependencies and compile the server
-go get github.com/go-video-transcoder
+go get github.com/bqqbarbhg/go-video-transcoder
 
