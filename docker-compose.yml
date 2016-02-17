@@ -4,8 +4,8 @@ govitradata:
     env_file:
         - common.env
 
-govitranginx:
-    container_name: govitra-nginx
+govitravideos:
+    container_name: govitra-videos
     image: bqqbarbhg/govitra-nginx
     env_file:
         - common.env
