@@ -12,8 +12,8 @@ govitranginx:
     volumes_from:
         - govitradata
 
-govitra:
-    container_name: govitra
+govitraapi:
+    container_name: govitra-api
     image: bqqbarbhg/govitra-uploader
     env_file:
         - common.env
