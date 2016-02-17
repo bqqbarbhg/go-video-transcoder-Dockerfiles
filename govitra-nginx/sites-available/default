@@ -1,6 +1,6 @@
 server {
     listen 80 default_server backlog=2048;
-    root /var/achminup-uploads/data;
+    root /var/govitra-uploads/data;
 
     # Make site accessible from http://localhost/
     server_name localhost;
