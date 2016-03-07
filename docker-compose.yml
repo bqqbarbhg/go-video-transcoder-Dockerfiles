@@ -1,10 +1,10 @@
 govitradata:
     container_name: govitra-data
-    image: bqqbarbhg/govitra-data
+    image: bqqbarbhg/govitra-data-arm
 
 govitravideos:
     container_name: govitra-videos
-    image: bqqbarbhg/govitra-nginx
+    image: bqqbarbhg/govitra-nginx-arm
     hostname: govitra-videos
     volumes_from:
         - govitradata
@@ -13,7 +13,7 @@ govitravideos:
 
 govitraapi:
     container_name: govitra-api
-    image: bqqbarbhg/govitra-uploader
+    image: bqqbarbhg/govitra-uploader-arm
     hostname: govitra-api
     env_file:
         - govitra.env
