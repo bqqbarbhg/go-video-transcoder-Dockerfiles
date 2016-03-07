@@ -1,4 +1,5 @@
-FROM learninglayers/base
+FROM armv7/armhf-ubuntu:14.04
+
 
 # Install dependencies
 RUN apt-get update && apt-get install -y nginx

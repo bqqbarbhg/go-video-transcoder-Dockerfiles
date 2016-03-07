@@ -1,4 +1,4 @@
-FROM learninglayers/base
+FROM armv7/armhf-ubuntu:14.04
 
 # Create data folders
 RUN mkdir -p /var/govitra-uploads/data

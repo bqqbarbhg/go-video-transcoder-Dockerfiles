@@ -1,22 +1,21 @@
 govitradata:
     container_name: govitra-data
     image: bqqbarbhg/govitra-data
-    env_file:
-        - common.env
 
 govitravideos:
     container_name: govitra-videos
     image: bqqbarbhg/govitra-nginx
-    env_file:
-        - common.env
+    hostname: govitra-videos
     volumes_from:
         - govitradata
+    links:
+        - govitraapi
 
 govitraapi:
     container_name: govitra-api
     image: bqqbarbhg/govitra-uploader
+    hostname: govitra-api
     env_file:
-        - common.env
         - govitra.env
     volumes_from:
         - govitradata
